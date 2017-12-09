@@ -8,7 +8,8 @@
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -26,7 +27,7 @@
     Birthday: <input type="text" name="birthday"><br>
     Gender: <input type="text" name="gender"><br>
     Password: <input type="password" name="password"><br>
-    <input type="submit" value="Submit form">
+    <input type="submit" value="Create">
 </form>
 
 

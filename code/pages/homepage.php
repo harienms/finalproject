@@ -28,20 +28,23 @@
 <h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
 <h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
 
-<form action="index.php?page=accounts&action=login" method="POST">
+<form action="index.php?page=tasks&action=login" method="POST">
 
     <div class="container">
         <section id="content">
             <form action="">
                 <h1>Login Form</h1>
                 <div>
-                    <input type="text" placeholder="Username" required="" id="username" />
+                    <input type="text" name = "email" placeholder="Username" required="" id="username" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <div>
-                    <input type="password" placeholder="Password" required="" id="password" />
+                    <input type="password" name = "password" placeholder="Password" required="" id="password" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <div>
                     <input type="submit" value="Log in" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="index.php?page=accounts&action=register">Register</a>
                 </div>
             </form><!-- form -->

@@ -90,8 +90,8 @@ class routes
         $route = new route();
         $route->http_method = 'POST';
         $route->action = 'login';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
         $route->method = 'login';
         $routes[] = $route;
 
