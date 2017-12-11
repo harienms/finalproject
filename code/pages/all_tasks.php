@@ -17,6 +17,11 @@
 
 <body>
 
+<form action="index.php?page=tasks&action=create" method="post" id="form1">
+    <button type="submit" form="form1" value="create">Insert Tasks</button>
+</form>
+
+
 <?php
 //this is how you print something
 
