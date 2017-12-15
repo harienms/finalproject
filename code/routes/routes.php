@@ -150,6 +150,25 @@ class routes
         $routes[] = $route;
 
 
+
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'create';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'insertTask';
+        $routes[] = $route;
+
+
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'create';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'store';
+        $routes[] = $route;
+
+
         return $routes;
     }
 

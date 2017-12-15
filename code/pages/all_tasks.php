@@ -17,9 +17,8 @@
 
 <body>
 
-<form action="index.php?page=tasks&action=create" method="post" id="form1">
-    <button type="submit" form="form1" value="create">Insert Tasks</button>
-</form>
+<a href="index.php?page=tasks&action=create">Insert Record</a>
+
 
 
 <?php

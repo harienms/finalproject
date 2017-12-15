@@ -1,7 +1,5 @@
 <?php
 
-
-
 //each page extends controller and the index.php?page=tasks causes the controller to be called
 class tasksController extends http\controller
 {
@@ -13,18 +11,13 @@ class tasksController extends http\controller
         self::getTemplate('show_task', $record);
     }
 
-    public static function insert()
-    {
-        self::getTemplate('show_task');
-    }
-
     //to call the show function the url is index.php?page=task&action=list_task
 
     public static function all()
     {
-        $records = todos::findAll();
+        //$records = todos::findAll();
         session_start();
-        if (key_exists('userID', $_SESSION)) {
+        if(key_exists('userID',$_SESSION)) {
             $userID = $_SESSION['userID'];
         } else {
 
@@ -42,9 +35,9 @@ class tasksController extends http\controller
 
     //you should check the notes on the project posted in moodle for how to use active record here
 
-    public static function create()
+    public static function insertTask()
     {
-        print_r($_POST);
+        self::getTemplate('createtask');
     }
 
     //this is the function to view edit record form
@@ -59,23 +52,27 @@ class tasksController extends http\controller
     //this would be for the post for sending the task edit form
     public static function store()
     {
+        $task = new todo();
+        $task->owneremail = $_POST['owneremail'];
+        print $_POST['owneremail'];
+        $task->ownerid = $_POST['ownerid'];
+        $task->createddate = $_POST['createddate'];
+        $task->duedate = $_POST['duedate'];
+        $task->message = $_POST['message'];
+        $task->isdone = $_POST['isdone'];
+        $task->save();
+        //self::getTemplate('all_tasks', $user);
 
-
-        $record = todos::findOne($_REQUEST['id']);
-        $record->body = $_REQUEST['body'];
-        $record->save();
-        print_r($_POST);
-
+        header("Location: index.php?page=tasks&action=all");
     }
 
-    public static function save()
-    {
+    public static function save() {
         session_start();
         $task = new todo();
 
-        $task->body = $_POST['body'];
+        //$task->body = $_POST['body'];
         $task->ownerid = $_SESSION['userID'];
-        $task->save();
+        $task->all();
 
     }
 
@@ -97,29 +94,22 @@ class tasksController extends http\controller
         //you might want to add something that handles if the password is invalid, you could add a page template and direct to that
         //after you login you can use the header function to forward the user to a page that displays their tasks.
         //        $record = accounts::findUser($_POST['email']);
-
         $user = accounts::findUserbyEmail($_REQUEST['email']);
         print_r($user);
-
+        //$tasks = accounts::findTasksbyID($_REQUEST['ownerid']);
+        // print_r($tasks);
         if ($user == FALSE) {
             echo 'user not found';
         } else {
 
-            if ($user->checkPassword($_POST['password']) == TRUE) {
-
-                echo 'login';
-
+            if($user->checkPassword($_POST['password']) == TRUE) {
                 session_start();
                 $_SESSION["userID"] = $user->id;
-
-                //forward the user to the show all todos page
-                // print_r($_SESSION);
                 header("Location: index.php?page=tasks&action=all");
             } else {
                 echo 'password does not match';
             }
-
         }
-
     }
+
 }
