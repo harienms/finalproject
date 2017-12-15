@@ -22,6 +22,18 @@
 
 print_r($data);
 ?>
+
+<form action="index.php?page=tasks&action=all" method="post">
+    Owner Email: <input type="text" name="owneremail"><br>
+    Owner Id: <input type="text" name="ownerid"><br>
+    Created date: <input type="text" name="createddate"><br>
+    Duedate: <input type="text" name="duedate"><br>
+    Birthday: <input type="text" name="birthday"><br>
+    Message: <input type="text" name="message"><br>
+    Isdone: <input type="password" name="isdone"><br>
+    <input type="submit" value="Insert">
+</form>
+
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
