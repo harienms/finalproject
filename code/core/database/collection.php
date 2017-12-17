@@ -59,6 +59,14 @@ abstract class collection
             return $recordsSet[0];
         }
     }
+
+    static public function findUser($user)
+    {
+        $tableName = get_called_class();
+        $sql = 'SELECT * FROM ' . $tableName. ' WHERE id ="' .$user. '"';
+        $recordSet = self::getResults($sql);
+        return $recordSet[0];
+    }
 }
 
 ?>
