@@ -16,7 +16,7 @@
 
 <body>
 
-<form action="index.php?page=tasks&action=edipt&id=<?php echo $data->id; ?>" method="post">
+<form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?>" method="post">
 
     <div class="container">
         <section id="content">
