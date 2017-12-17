@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>The HTML5 Herald</title>
+    <title>Home Page</title>
 
     <!--[if lt IE 9]>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>-->
@@ -14,21 +14,7 @@
     <![endif]-->
 </head>
 
-<body>
-
-
-<h1>
-    <?php
-
-    //this how to print some data;
-    //echo $data['site_name'];
-
-    ?> </h1>
-
-<h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
-<h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
-
-<form action="index.php?page=tasks&action=login" method="POST">
+    <form action="index.php?page=tasks&action=login" method="post">
 
     <div class="container">
         <section id="content">
@@ -37,16 +23,17 @@
                 <div>
                     <input type="text" name = "email" placeholder="Username" required="" id="username" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                </div>
+                </div><br><br><br>
                 <div>
                     <input type="password" name = "password" placeholder="Password" required="" id="password" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                </div>
+                </div><br><br><br>
                 <div>
                     <input type="submit" value="Log in" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="index.php?page=accounts&action=register">Register</a>
                 </div>
+                <br><br>
             </form><!-- form -->
         </section><!-- content -->
     </div><!-- container -->

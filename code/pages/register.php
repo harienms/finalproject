@@ -20,14 +20,49 @@
 
 
 <form action="index.php?page=accounts&action=register" method="post">
-    First name: <input type="text" name="fname"><br>
-    Last name: <input type="text" name="lname"><br>
-    Email: <input type="text" name="email"><br>
-    Phone: <input type="text" name="phone"><br>
-    Birthday: <input type="text" name="birthday"><br>
-    Gender: <input type="text" name="gender"><br>
-    Password: <input type="password" name="password"><br>
-    <input type="submit" value="Create">
+
+    <div class="container">
+        <section id="content">
+            <form action="">
+                <h1>Login Form</h1>
+                <div>
+                    <input type="text" name = "fname" placeholder="First Name" required="" id="username" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </div><br><br><br>
+
+                <div>
+                    <input type="text" name = "lname" placeholder="Last Name" required="" id="username" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </div><br><br><br>
+                <div>
+                    <input type="text" name = "email" placeholder="Email Address" required="" id="username" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </div><br><br><br>
+                <div>
+                    <input type="text" name = "phone" placeholder="Phone" required="" id="username" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </div><br><br><br>
+
+                <div>
+                    <input type="text" name = "birthdate" placeholder="BirthDate" required="" id="username" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </div><br><br><br>
+                <div>
+                    <input type="text" name = "gender" placeholder="Gender" required="" id="username" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </div><br><br><br>
+                <div>
+                    <input type="password" name = "password" placeholder="Password" required="" id="password" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </div><br><br><br>
+                <div>
+                    <input type="submit" value="Sign Up" />
+                    &nbsp;
+                </div>
+                <br><br>
+            </form><!-- form -->
+        </section><!-- content -->
+    </div><!-- container -->
 </form>
 
 
