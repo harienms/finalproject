@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>The HTML5 Herald</title>
+    <title>Registration Form</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
@@ -26,7 +26,7 @@
             <form action="">
                 <h1>Login Form</h1>
                 <div>
-                    <input type="text" name = "fname" placeholder="First Name" required="" id="username" />
+                    <input type="text" name = "fname" placeholder="First Name" pattern="[A-Za-z]*" title="Enter only characters" required id="username" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                 </div><br><br><br>
 
@@ -35,11 +35,11 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;
                 </div><br><br><br>
                 <div>
-                    <input type="text" name = "email" placeholder="Email Address" required="" id="username" />
+                    <input type="email" name = "email" placeholder="Email Address" required="" id="username" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                 </div><br><br><br>
                 <div>
-                    <input type="text" name = "phone" placeholder="Phone" required="" id="username" />
+                    <input type="number" name = "phone" placeholder="Phone" required="" id="username" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                 </div><br><br><br>
 

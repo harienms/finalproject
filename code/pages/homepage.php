@@ -21,7 +21,7 @@
             <form action="">
                 <h1>Login Form</h1>
                 <div>
-                    <input type="text" name = "email" placeholder="Username" required="" id="username" />
+                    <input type="email" name = "email" placeholder="Username" required="" id="username" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                 </div><br><br><br>
                 <div>

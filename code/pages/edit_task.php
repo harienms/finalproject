@@ -42,8 +42,11 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;
                 </div><br><br><br>
                 <div>
-                    <input type="text" name = "isdone" placeholder="IS Done" required="" id="isdone" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label><b>IS DONE</b></label><br>
+                    <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
                 </div><br><br><br>
 
                 <div>
