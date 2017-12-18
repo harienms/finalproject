@@ -178,6 +178,8 @@ class routes
         $route->method = 'edit';
         $routes[] = $route;
 
+       
+
 
         return $routes;
     }
