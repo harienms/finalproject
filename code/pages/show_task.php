@@ -36,6 +36,7 @@ print utility\htmlTable::generateTableFromOneRecord($data);
     </form>
 
     <br>
+    <h2><a href="index.php?page=accounts&action=myAccount&id=<?php echo $data->id; ?>">User Profile</a></h2>
 
     <h2><label><a href="index.php">Logout</a></label>
 

@@ -134,10 +134,12 @@ class accountsController extends http\controller
             }
 
         }
+    }
 
-
-
-
+    public static function myAccount()
+    {
+        $record = accounts::findOne($_REQUEST['id']);
+        self::getTemplate('myAccount', $record);
     }
 
 }
